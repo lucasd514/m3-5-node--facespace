@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<div class="profile-page">
+  <%= user.name %>
+  <img src="<%= user.avatarUrl %>" alt="disp pic">
+  <div>
+    <h3><%= user.name %>'s Friends</h3>
+    <ul>
+      <li><%= user.friends %> <%= console.log(user.friends) %></li>
+    </ul>
+  </div>
+</div>
+<%- include('../partials/footer') %>

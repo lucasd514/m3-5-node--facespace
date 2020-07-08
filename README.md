@@ -102,6 +102,7 @@ Create a profile page that will be unique to each user. Our endpoint should cont
 
 #### 2.1 Create a users endpoint
 
+//done
 Create a `GET` endpoint that we can use to show the user's profile page. Your endpoint should start with `/users/` and end with a url param for the `_id`.
 
 This endpoint will trigger a function `handleProfilePage` that you will need to create as well. For now, have that function `res.send` the `_id` that is in the url.
