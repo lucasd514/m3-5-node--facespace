@@ -144,6 +144,8 @@ Add the user's data to that object. You will need to figure out which user data 
 </div>
 ```
 
+// done
+
 #### 2.4 Create the HTML and CSS for the Profile page
 
 Below is what the profile page should look like. While it doesn't need to be pixel-perfect, it should be close enough as to _not_ look different from the images below. I've provided the mobile version as well. Look at [`public/css/profile-page.css`](public/css/profile-page.css) Add the right classes to the right elements.

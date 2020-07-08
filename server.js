@@ -25,8 +25,12 @@ const handleProfilePage = (req, res) => {
   console.log(foundUser);
   // user friends
   console.log(foundUser.friends);
-  const userFriends = foundUser.find();
-  res.render("pages/profile", { user: foundUser });
+  const userFriends = foundUser.friends.map((friendID) => {
+    return users.find((userObj) => {
+      return userObj._id == friendID;
+    });
+  });
+  res.render("pages/profile", { user: foundUser, friends: userFriends });
 };
 // -----------------------------------------------------
 // server endpoints

@@ -4,8 +4,13 @@
   <img src="<%= user.avatarUrl %>" alt="disp pic">
   <div>
     <h3><%= user.name %>'s Friends</h3>
-    <ul>
-      <li><%= user.friends %> <%= console.log(user.friends) %></li>
+    <ul class = 'friend'>
+     <% friends.forEach((friend) => { %>
+         <li> <%= friend.name %>
+            <img src="<%= friend.avatarUrl %>" alt="friend pic">
+        </li>
+           <% }) %>
+
     </ul>
   </div>
 </div>
