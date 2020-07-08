@@ -54,6 +54,8 @@ Once you've added this right code, load the homepage at [http://localhost:8000](
 
 #### 1.2 Create the `homepage.ejs` template
 
+//done
+
 - In `views/pages/` there is a file called `homepage.ejs`
 - There are partials for the header and footer. Add those to `homepage.ejs`.
 - Create a `div` with a class of `home-page`
@@ -61,6 +63,7 @@ Once you've added this right code, load the homepage at [http://localhost:8000](
 
 #### 1.3 Render the homepage
 
+//done
 To render the homepage, you will need to modify the `handleHomepage` function. Instead of `send`ing something, `render` the `homepage.ejs` file that you just updated.
 
 You should now see this in the browser:
