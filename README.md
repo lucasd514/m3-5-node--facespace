@@ -93,7 +93,7 @@ Once the data is available to the template, we need to loop through the array an
 You should now see this in the browser:
 
 <img src="./__lecture/assets/homepage_3.png" />
-
+q1 done
 ---
 
 ### Exercise 2 - The Profile Page
