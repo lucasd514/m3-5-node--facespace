@@ -34,6 +34,8 @@ The homepage should show a grid of all of the users in the system.
 
 #### 1.1 Create the homepage endpoint
 
+//done
+
 - Create a `GET` endpoint for the homepage.
 
 ```js
@@ -43,7 +45,7 @@ The homepage should show a grid of all of the users in the system.
 - Declare the `handleHomepage` function, and send this `res`ponse:
 
 ```js
-res.status(200).send('homepage');
+res.status(200).send("homepage");
 ```
 
 Once you've added this right code, load the homepage at [http://localhost:8000](http://localhost:8000). You should see this.
@@ -70,7 +72,7 @@ You should now see this in the browser:
 First we need to pass the users data to the `ejs` template. When rendering an `ejs` template, we can pass it an object as the second argument that can contain anything we like. In this case, we want to pass the entire `users` array.
 
 ```js
-res.status(200).render('pages/homepage', { users: users });
+res.status(200).render("pages/homepage", { users: users });
 ```
 
 Once the data is available to the template, we need to loop through the array and render all of the images.
@@ -206,7 +208,7 @@ _Note: You will see `[Object: null prototype]` in the console, if you `console.l
 We can redirect the browser to an endpoint with the following code.
 
 ```js
-res.redirect('/the-endpoint');
+res.redirect("/the-endpoint");
 ```
 
 5. You should also return a status code to the browser. Chain them as we did in previous workshops.
