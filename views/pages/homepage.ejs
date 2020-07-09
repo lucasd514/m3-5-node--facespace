@@ -6,7 +6,10 @@
     <ul class="homepage__all">
         <% users.forEach(user => { %>
         <li class="homepage__all--user">
-          <a><img src="<%= user.avatarUrl %>" />
+          <a href="/users/<%= + user._id %>"><img src="<%= user.avatarUrl %>" /></a>
+           <% if (currentUser.friends != undefined && currentUser.friends.includes(user._id) ){ %>
+          <span class="ribbon">Friends!</span>
+        <% }  %> 
         </li>
         <% }) %>
       </ul>
