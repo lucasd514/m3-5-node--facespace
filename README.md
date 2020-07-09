@@ -165,7 +165,7 @@ For this workshop, we're going to simply ask for the user's first name and if it
 In `server.js` we need to have an endpoint that will receive requests for the signin page. This endpoint will call a function called `handleSignin`. For testing purposes, do a `res.send('ok')` in that function. This will allow us to confirm that the signin endpoint works.
 
 <img src="./__lecture/assets/signin_1.png" />
-
+//done
 #### 3.2 Create the form
 
 In `views/pages`, create a new file called `signin.ejs`. Add the following `ejs` code to the file. Take a few minutes to go over this code and make sure you understand what it's doing.
@@ -192,6 +192,7 @@ In `views/pages`, create a new file called `signin.ejs`. Add the following `ejs`
 The form we've just added doesn't yet render on the `/signin` page. We need to tell `handleSignin` to render that particular `ejs` page template.
 
 <img src="./__lecture/assets/signin_2.png" />
+//done
 
 #### 3.4 Receive the data from the form
 

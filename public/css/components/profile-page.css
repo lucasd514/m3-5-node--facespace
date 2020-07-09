@@ -1,4 +1,17 @@
 /* css here */
+.bucket1 {
+  border: 3px red solid;
+}
+.bucket2 {
+  border: 3px yellow solid;
+}
+.listmain {
+  border: 12px green solid;
+}
+
+.pic {
+  border: 3px blue solid;
+}
 .profile-page--banner {
   background: url(/images/facespace_bg.jpg) center center;
   background-size: cover;

@@ -1,13 +1,14 @@
 <%- include('../partials/header') %>
-<div class="profile-page">
-  <%= user.name %>
-  <img src="<%= user.avatarUrl %>" alt="disp pic">
-  <div>
-    <h3><%= user.name %>'s Friends</h3>
-    <ul class = 'friend'>
+<div class= "bucket1 " >
+   <img src="<%= user.avatarUrl %>" class='' alt="disp pic">
+   <p><%= user.name %></p>
+</div>
+ <div class= "bucket2" >
+    <h3 ><%= user.name %>'s Friends</h3>
+    <ul class = 'listmain  ' >
      <% friends.forEach((friend) => { %>
-         <li> <%= friend.name %>
-            <img src="<%= friend.avatarUrl %>" alt="friend pic">
+         <li class = "pic" > <%= friend.name %>
+            <img src="<%= friend.avatarUrl %>" class -alt="friend pic">
         </li>
            <% }) %>
 
