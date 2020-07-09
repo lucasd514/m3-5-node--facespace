@@ -36,6 +36,20 @@ const handleProfilePage = (req, res) => {
 const handleSignin = (req, res) => {
   res.render("pages/signin");
 };
+
+const nameLookUp = (req, res) => {
+  const foundUser = users.find((user) => user.name === req.body.firstName);
+  console.log(foundUser);
+  // const urlUser = "users/" + foundUser._id;
+  // console.log(urlUser);
+  if (foundUser === undefined) {
+    res.status(404).send("user doesnt exist :<");
+  } else {
+    const urlUser = "users/" + foundUser._id;
+    console.log(urlUser);
+    res.status(200).redirect(urlUser);
+  }
+};
 // -----------------------------------------------------
 // server endpoints
 express()
@@ -43,7 +57,8 @@ express()
   .use(express.static("public"))
   .use(express.urlencoded({ extended: false }))
   .set("view engine", "ejs")
-
+  // form link
+  .post("/getname", nameLookUp)
   // endpoints
   .get("/", handleHomepage)
   .get("/users/:_id", handleProfilePage)
