@@ -14,7 +14,10 @@ const handleFourOhFour = (req, res) => {
 // create pages
 const handleHomepage = (req, res) => {
   console.log(req.params);
-  res.status(200).render("pages/homepage", { users: users });
+  console.log("this person is ", currentUser);
+  res
+    .status(200)
+    .render("pages/homepage", { users: users, currentUser: currentUser });
 };
 
 const handleProfilePage = (req, res) => {
@@ -30,11 +33,15 @@ const handleProfilePage = (req, res) => {
       return userObj._id == friendID;
     });
   });
-  res.render("pages/profile", { user: foundUser, friends: userFriends });
+  res.render("pages/profile", {
+    user: foundUser,
+    friends: userFriends,
+    currentUser: currentUser,
+  });
 };
 
 const handleSignin = (req, res) => {
-  res.render("pages/signin");
+  res.render("pages/signin", { currentUser: currentUser });
 };
 
 const nameLookUp = (req, res) => {
@@ -48,6 +55,8 @@ const nameLookUp = (req, res) => {
     const urlUser = "users/" + foundUser._id;
     console.log(urlUser);
     res.status(200).redirect(urlUser);
+    currentUser = foundUser;
+    console.log("current user is =", currentUser);
   }
 };
 // -----------------------------------------------------
